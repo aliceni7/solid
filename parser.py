@@ -8,32 +8,25 @@ The file follows the following format:
      Every command is a single character that takes up a line
      Any command that requires arguments must have those arguments in the second line.
      The commands are as follows:
-
-
          push: push a copy of the current top of the coordinate system stack to the stack
-
          pop: pop off the current top of the coordinate system stack
-
          All the shape commands work as follows:
              1) Add the shape to a temporary matrix
              2) Multiply that matrix by the current top of the coordinate system stack
              3) Draw the shape to the screen
              4) Clear the temporary matrix
-
-
          sphere: add a sphere to the POLYGON matrix -
                  takes 4 arguemnts (cx, cy, cz, r)
-         torus: add a torus to the POLYGON matrix - 
+         torus: add a torus to the POLYGON matrix -
                 takes 5 arguemnts (cx, cy, cz, r1, r2)
-         box: add a rectangular prism to the POLYGON matrix - 
-              takes 6 arguemnts (x, y, z, width, height, depth)	    
+         box: add a rectangular prism to the POLYGON matrix -
+              takes 6 arguemnts (x, y, z, width, height, depth)
          clear: clears the edge and POLYGON matrices
-
-	 circle: add a circle to the edge matrix - 
+	     circle: add a circle to the edge matrix -
 	         takes 4 arguments (cx, cy, cz, r)
-	 hermite: add a hermite curve to the edge matrix -
+    	 hermite: add a hermite curve to the edge matrix -
 	          takes 8 arguments (x0, y0, x1, y1, rx0, ry0, rx1, ry1)
-	 bezier: add a bezier curve to the edge matrix -
+	     bezier: add a bezier curve to the edge matrix -
 	         takes 8 arguments (x0, y0, x1, y1, x2, y2, x3, y3)
          line: add a line to the edge matrix -
                takes 6 arguemnts (x0, y0, z0, x1, y1, z1)
@@ -56,7 +49,6 @@ The file follows the following format:
                save the screen to a file -
                takes 1 argument (file name)
          quit: end parsing
-
 See the file script for an example of the file format
 """
 ARG_COMMANDS = [ 'box', 'sphere', 'torus', 'circle', 'bezier', 'hermite', 'line', 'scale', 'move', 'rotate', 'save' ]
